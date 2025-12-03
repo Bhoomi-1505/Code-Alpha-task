@@ -1,0 +1,5 @@
+------ Portfolio Summary ------
+GOOG: 3 shares × $140 = $420
+MSFT: 5 shares × $300 = $1500
+AMZN: 8 shares × $120 = $960
+Total Investment = $2880
