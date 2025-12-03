@@ -12,7 +12,7 @@ incorrect_guesses = 0
 max_incorrect = 6
 
 # Step 4: Game Loop
-print("🎮 Welcome to Hangman!")
+print(" Welcome to Hangman!")
 print("Guess the word, one letter at a time.")
 print("You have 6 incorrect guesses.\n")
 
@@ -28,11 +28,11 @@ while incorrect_guesses < max_incorrect and "_" in display_word:
 
     # Validate input
     if len(guess) != 1 or not guess.isalpha():
-        print("❌ Please enter a single alphabet letter.\n")
+        print(" Please enter a single alphabet letter.\n")
         continue
 
     if guess in guessed_letters:
-        print("⚠️ You already guessed that letter!\n")
+        print("You already guessed that letter!\n")
         continue
 
     # Add the guess to list
@@ -40,17 +40,17 @@ while incorrect_guesses < max_incorrect and "_" in display_word:
 
     # Check the guess
     if guess in secret_word:
-        print("✅ Good guess!\n")
+        print(" Good guess!\n")
         # Reveal the letter in display_word
         for i in range(len(secret_word)):
             if secret_word[i] == guess:
                 display_word[i] = guess
     else:
         incorrect_guesses += 1
-        print("❌ Wrong guess!\n")
+        print(" Wrong guess!\n")
 
 # Step 5: End of game
 if "_" not in display_word:
-    print("🎉 Congratulations! You guessed the word:", secret_word)
+    print(" Congratulations! You guessed the word:", secret_word)
 else:
-    print("💀 Game Over! The correct word was:", secret_word)
+    print("Game Over! The correct word was:", secret_word)
